@@ -1,0 +1,9 @@
+.idea
+__pycache__
+bluetooth
+build
+dist
+graphics/__pycache__
+mechanics/__pycache__
+misc/__pycache__
+network/__pycache__
