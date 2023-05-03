@@ -64,7 +64,7 @@ class Engine:
                     for _pl, server_ports in [(P2, P1_SERVER_PORTS), (P1, P2_SERVER_PORTS)]:
                         if _pl in matrix[idx2[0]][idx2[1]] and idx2 in server_ports:
                             if '+' in matrix[idx2[0]][idx2[1]]:
-                                skills[_pl] += LB
+                                skills[_pl].append(LB)
                             Engine._add_to_stack(stack, _pl, matrix[idx2[0]][idx2[1]])
                             matrix[idx2[0]][idx2[1]] = NC
                             break
