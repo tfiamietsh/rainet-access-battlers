@@ -11,7 +11,7 @@ Digital implementation of the 5pb's board game Rai-Net Access Battlers
 # Manual
 <details>
 <summary>Click here!</summary>
-<h3>Multyplayer via bluetooth</h3>
+<h3>Multiplayer via bluetooth</h3>
 One player starts a new duel, the other joins it. Next, both choose the color of the cards.
 <br>
 <h3>Initial positions</h3>
