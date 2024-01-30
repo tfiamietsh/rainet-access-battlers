@@ -1,7 +1,7 @@
 import pygame
 import pygame.event
 from misc.decorators import *
-from misc.types import *
+from misc.managers import *
 
 
 @singleton
@@ -10,7 +10,9 @@ class Game:
         pygame.init()
         pygame.display.set_caption('RaiNet Access Battlers')
         self.__game_over = False
-        self.__screen = pygame.display.set_mode(Resolution().to_tuple())
+        resolutions = [Resolution(808, 708)]
+        self.__screen = pygame.display.set_mode(ResolutionManager(resolutions[0], resolutions)
+                                                .current_resolution.to_tuple())
         self.__FPS = 30
         self.__clock = pygame.time.Clock()
 
