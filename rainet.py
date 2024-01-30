@@ -1,7 +1,9 @@
 import pygame
 import pygame.event
+from misc.decorators import *
 
 
+@singleton
 class Game:
     def __init__(self):
         pygame.init()
