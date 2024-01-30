@@ -10,7 +10,7 @@ class Game:
         pygame.init()
         pygame.display.set_caption('RaiNet Access Battlers')
         self.__game_over = False
-        self.__screen = pygame.display.set_mode(Resolution(1, 1).to_tuple())
+        self.__screen = pygame.display.set_mode(Resolution().to_tuple())
         self.__FPS = 30
         self.__clock = pygame.time.Clock()
 
@@ -18,7 +18,7 @@ class Game:
         pygame.quit()
 
     @property
-    def screen(self):
+    def screen(self) -> pygame.Surface:
         return self.__screen
 
     def start(self):
