@@ -1,4 +1,5 @@
 from __future__ import annotations
+from pathlib import Path
 import pygame
 import PIL.Image
 from misc.types import Vec2f
@@ -21,3 +22,9 @@ class Image:
 
     def draw(self, surface: pygame.Surface, pos: Vec2f):
         surface.blit(self.__image, pos.to_tuple())
+
+
+class ImageLoader:
+    @staticmethod
+    def load(path: Path) -> Image:
+        return Image(PIL.Image.open(path))
