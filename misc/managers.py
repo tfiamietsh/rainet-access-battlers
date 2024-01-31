@@ -13,4 +13,4 @@ class ResolutionManager(dict, Iterable):
 
     @property
     def current_resolution(self) -> Resolution:
-        return self[self.current_idx]
+        return self[self._current_idx]

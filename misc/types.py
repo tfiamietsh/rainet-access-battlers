@@ -4,17 +4,13 @@ from typing import Callable
 
 class Iterable:
     def __init__(self, idx_limit: int):
-        self.__current_idx, self.__idx_limit = 0, idx_limit
-
-    @property
-    def current_idx(self) -> int:
-        return self.__current_idx
+        self._current_idx, self._idx_limit = 0, idx_limit
 
     def next(self):
-        self.__current_idx = (self.__current_idx + 1) % self.__idx_limit
+        self._current_idx = (self._current_idx + 1) % self._idx_limit
 
     def prev(self):
-        self.__current_idx = (self.__current_idx - 1) % self.__idx_limit
+        self._current_idx = (self._current_idx - 1) % self._idx_limit
 
 
 class Resolution:
